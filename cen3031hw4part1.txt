@@ -1,0 +1,21 @@
+Part 1:
+What is defined in the controllers?
+	coordinates.server.controller:
+		-config
+		-request
+	listings.server.controller:
+		-mongoose 
+		-Listing
+		-functions used: list, read, create, update, delete, listingByID 
+
+How the router makes use of the controllers to determine the flow of request handling?
+	-first it includes the 2 controller files
+	-includes express
+	-if it has '/' then call functions from the listings.server.controller file
+	-if it has '/:listingID' then call functions from the same file 
+	-again, if a parameter is specified, a function from the same file is called
+	-coordinates.server.controller is used to receive the coordinates
+
+How middleware is used throughout the application to modularize the code?
+	-middleware is used to call a function/check errors before passing a request
+	
